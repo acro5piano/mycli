@@ -131,7 +131,7 @@ def suggest_based_on_last_token(token, text_before_cursor, full_text, identifier
         return suggest_based_on_last_token(prev_keyword, text_before_cursor,
                                            full_text, identifier)
     else:
-        token_v = token.value.lower()
+        token_v = token[1].value.lower()
 
     is_operand = lambda x: x and any([x.endswith(op) for op in ['+', '-', '*', '/']])
 
